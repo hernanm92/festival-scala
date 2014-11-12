@@ -1,0 +1,13 @@
+Decisiones de diseño tomadas:
+
+Generar una única tabla de tareas en la que se indique:
+  -su identificador numérico
+  -el tiempo que lleva realizarla
+  -su complejidad
+  -su tarea padre
+
+Se opto por una tabla única dado que se asume que las subtareas no son divisibles en mas subtareas, y crear una tabla para tareas y otra para las subtareas seria menos óptimo.
+
+Dado que hay varios niveles de complejidades distintas se opto por generar una tabla Complejidades para que se evite problemas a la hora de almacenar cadenas de caracteres (como por ejemplo: "Complejidad mínima", "Complejidad máxima").
+
+Los impuestos dependen del país, se nos presentaron dos tipos diferentes de impuestos pero podrían ser mas. Entonces se genero una tabla impuestos y como sabemos que a una misma tarea se le puede aplicar varios impuestos generamos a su vez una tabla intermedia llamada ImpuestosPorTareas, que esta definida por el identificador de la tarea y el identificador del impuesto 
